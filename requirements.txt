@@ -7,4 +7,5 @@ langchain-huggingface>=0.0.3
 sentence-transformers>=3.0.0
 sqlalchemy>=2.0.0
 pandas>=2.0.0
+streamlit
 python-dotenv>=1.0.0
