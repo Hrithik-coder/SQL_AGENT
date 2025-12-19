@@ -9,17 +9,25 @@ Autonomous Loop: Powered by LangGraph, allowing the agent to perform multi-step 
 
 
 # Tech Stack
-###Language### : Python 3.10+
+Language : Python 3.10+
 
-###LLM Orchestration### : LangGraph & LangChain
+LLM Orchestration : LangGraph & LangChain
 
-###LLM### : Groq (openai/gpt-oss-20b)
+LLM : Groq (openai/gpt-oss-20b)
 
-###Vector DB### : Qdrant (In-memory)
+Vector DB : Qdrant (In-memory)
 
-###Database### : SQLite
+Database : SQLite
 
-###Embeddings### : HuggingFace (all-mpnet-base-v2)
+Embeddings : HuggingFace (all-mpnet-base-v2)
+
+# Table Details
+
+"name": The full name of the employee which is unique
+"designation": The job title or role
+"department": The department name (AI, HR, Sales)
+"salary": The numeric value representing annual pay
+"id": The unique primary key
 
 
 ### 1. Prerequisites
