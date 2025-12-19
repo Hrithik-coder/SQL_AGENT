@@ -1,11 +1,14 @@
-# SQL_AGENT
-An autonomous AI Agent designed to interact with SQL databases using a ReAct (Reasoning and Acting) loop. This agent doesn't just run SQL.it validates intent, retrieves relevant schema context using a Vector Database
+## System Architecture
 
-Intent Classification: Prevents off-topic queries or prompt injections.
+The system is designed as a state-driven graph. Instead of a linear script, the agent has the "agency" to decide its own path based on the database's feedback.
 
-Semantic Schema Retrieval: Uses Qdrant and Sentence-Transformers to provide the LLM with only the relevant table/column metadata.
-
-Autonomous Loop: Powered by LangGraph, allowing the agent to perform multi-step tasks (e.g., "Update X and then show me the average of Y").
+1.  **Intent Classification**: A guardrail node that filters out non-SQL or off-topic queries.
+2.  **Semantic Retrieval**: Queries a **Qdrant Vector Store** to inject relevant column metadata into the LLM context, preventing hallucinations.
+3.  **The ReAct Loop**:
+    * **Agent**: Generates SQL queries using Llama 3.1 70B (via Groq).
+    * **Tool**: Executes queries against the SQLite database using SQLAlchemy.
+    * **Feedback**: If a query fails, the agent receives the error and self-corrects in the next loop.
+4.  **Streamlit UI**: A ChatGPT-style interface that displays the agent's thought process and status updates in real-time.
 
 
 # Tech Stack
@@ -53,6 +56,9 @@ cd agentic-sql-analyst
 
 # Install dependencies
 pip install -r requirements.txt
+
+# run employee_table.py for the table creation
+python employee_table.py
 
 # run the streamlit application
 streamlit run app.py
