@@ -9,17 +9,17 @@ Autonomous Loop: Powered by LangGraph, allowing the agent to perform multi-step 
 
 
 # Tech Stack
-### Language ###: Python 3.10+
+###Language### : Python 3.10+
 
-### LLM Orchestration ### : LangGraph & LangChain
+###LLM Orchestration### : LangGraph & LangChain
 
-### LLM ### : Groq (openai/gpt-oss-20b)
+###LLM### : Groq (openai/gpt-oss-20b)
 
-### Vector DB ###: Qdrant (In-memory)
+###Vector DB### : Qdrant (In-memory)
 
-### Database ###: SQLite
+###Database### : SQLite
 
-### Embeddings ###: HuggingFace (all-mpnet-base-v2)
+###Embeddings### : HuggingFace (all-mpnet-base-v2)
 
 
 ### 1. Prerequisites
