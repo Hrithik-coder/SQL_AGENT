@@ -24,9 +24,13 @@ Embeddings : HuggingFace (all-mpnet-base-v2)
 # Table Details
 
 "name": The full name of the employee which is unique
+
 "designation": The job title or role
+
 "department": The department name (AI, HR, Sales)
+
 "salary": The numeric value representing annual pay
+
 "id": The unique primary key
 
 
