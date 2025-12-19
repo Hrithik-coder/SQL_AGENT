@@ -40,7 +40,7 @@ Ensure you have Python 3.10+ installed. You will also need a **Groq API Key**.
 ### 2. Installation
 ```bash
 # Clone the repository
-git clone "git repo"
+git clone "[git repo](https://github.com/Hrithik-coder/SQL_AGENT.git)"
 
 cd agentic-sql-analyst
 
