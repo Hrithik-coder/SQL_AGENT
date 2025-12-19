@@ -5,7 +5,7 @@ The system is designed as a state-driven graph. Instead of a linear script, the 
 1.  **Intent Classification**: A guardrail node that filters out non-SQL or off-topic queries.
 2.  **Semantic Retrieval**: Queries a **Qdrant Vector Store** to inject relevant column metadata into the LLM context, preventing hallucinations.
 3.  **The ReAct Loop**:
-    * **Agent**: Generates SQL queries using Llama 3.1 70B (via Groq).
+    * **Agent**: Generates SQL queries using openai/gpt-oss-20b (via Groq).
     * **Tool**: Executes queries against the SQLite database using SQLAlchemy.
     * **Feedback**: If a query fails, the agent receives the error and self-corrects in the next loop.
 4.  **Streamlit UI**: A ChatGPT-style interface that displays the agent's thought process and status updates in real-time.
@@ -59,6 +59,8 @@ pip install -r requirements.txt
 
 # run employee_table.py for the table creation
 python employee_table.py
+
+first add some employee data by querying the agent then perform the various actions
 
 # run the streamlit application
 streamlit run app.py
