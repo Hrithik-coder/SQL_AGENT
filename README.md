@@ -37,6 +37,13 @@ Embeddings : HuggingFace (all-mpnet-base-v2)
 ### 1. Prerequisites
 Ensure you have Python 3.10+ installed. You will also need a **Groq API Key**.
 
+-- Configuration
+
+Create a .env file in the root directory:
+
+Code snippet: 
+GROQ_API_KEY=your_groq_api_key_here
+
 ### 2. Installation
 ```bash
 # Clone the repository
@@ -46,3 +53,6 @@ cd agentic-sql-analyst
 
 # Install dependencies
 pip install -r requirements.txt
+
+# run the streamlit application
+streamlit run app.py
